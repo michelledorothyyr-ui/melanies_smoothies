@@ -19,7 +19,11 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(
     col("SEARCH_ON")
 )
 
-st.dataframe(data=my_dataframe, use_container_width=True)
+# Convert the Snowpark Dataframe to a Pandas Dataframe
+pd_df = my_dataframe.to_pandas()
+
+st.dataframe(pd_df)
+
 st.stop()
 
 # Commented out for now
