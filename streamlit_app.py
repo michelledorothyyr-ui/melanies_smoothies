@@ -30,6 +30,4 @@ if ingredients_list:
 
     st.write(ingredients_string)
 
-        my_insert_stmt = """insert into smoothies.public.orders
-    ...
-    """
+my_insert_stmt = """insert into smoothies.public.orders
